@@ -28,7 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bunifu.UI.WinForms" Version="9.1.0" />
     <PackageReference Include="Catel.Core" Version="6.2.0" />
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
     <PackageReference Include="MySql.Data" Version="9.5.0" />
   </ItemGroup>
 

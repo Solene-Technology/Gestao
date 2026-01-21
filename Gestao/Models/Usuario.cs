@@ -10,8 +10,9 @@ namespace Gestao.Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-
+        public string UserName { get; set; }
         public string Perfil { get; set; }
         public string SenhaHash { get; set; }
+        public Boolean Ativo { get; set; }
     }
 }
