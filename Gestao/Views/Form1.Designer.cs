@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             MenuVertical = new Panel();
-            button10 = new Button();
-            button1 = new Button();
-            button11 = new Button();
-            button6 = new Button();
-            button5 = new Button();
+            btnEstudantes = new Button();
+            btnTurmas = new Button();
+            btnCurso = new Button();
+            btnListUser = new Button();
+            btnRelatorios = new Button();
             button3 = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button2 = new Button();
+            btnDisciplina = new Button();
+            btnPropinas = new Button();
+            btnProfessores = new Button();
             pictureBox2 = new PictureBox();
             BarraDeTitulo = new Panel();
             iconrestaurar = new PictureBox();
@@ -60,15 +60,15 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(192, 0, 0);
-            MenuVertical.Controls.Add(button10);
-            MenuVertical.Controls.Add(button1);
-            MenuVertical.Controls.Add(button11);
-            MenuVertical.Controls.Add(button6);
-            MenuVertical.Controls.Add(button5);
+            MenuVertical.Controls.Add(btnEstudantes);
+            MenuVertical.Controls.Add(btnTurmas);
+            MenuVertical.Controls.Add(btnCurso);
+            MenuVertical.Controls.Add(btnListUser);
+            MenuVertical.Controls.Add(btnRelatorios);
             MenuVertical.Controls.Add(button3);
-            MenuVertical.Controls.Add(button9);
-            MenuVertical.Controls.Add(button8);
-            MenuVertical.Controls.Add(button2);
+            MenuVertical.Controls.Add(btnDisciplina);
+            MenuVertical.Controls.Add(btnPropinas);
+            MenuVertical.Controls.Add(btnProfessores);
             MenuVertical.Controls.Add(pictureBox2);
             MenuVertical.Dock = DockStyle.Left;
             MenuVertical.Location = new Point(0, 0);
@@ -76,87 +76,89 @@
             MenuVertical.Size = new Size(250, 650);
             MenuVertical.TabIndex = 0;
             // 
-            // button10
+            // btnEstudantes
             // 
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button10.ForeColor = Color.White;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(3, 114);
-            button10.Name = "button10";
-            button10.Size = new Size(247, 43);
-            button10.TabIndex = 10;
-            button10.Text = "Estudantes";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            btnEstudantes.FlatAppearance.BorderSize = 0;
+            btnEstudantes.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnEstudantes.FlatStyle = FlatStyle.Flat;
+            btnEstudantes.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnEstudantes.ForeColor = Color.White;
+            btnEstudantes.Image = (Image)resources.GetObject("btnEstudantes.Image");
+            btnEstudantes.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEstudantes.Location = new Point(3, 114);
+            btnEstudantes.Name = "btnEstudantes";
+            btnEstudantes.Size = new Size(247, 43);
+            btnEstudantes.TabIndex = 10;
+            btnEstudantes.Text = "Estudantes";
+            btnEstudantes.UseVisualStyleBackColor = true;
+            btnEstudantes.Click += btnEstudantes_Click;
             // 
-            // button1
+            // btnTurmas
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Image = Properties.Resources.student_card_icon_150965;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(3, 189);
-            button1.Name = "button1";
-            button1.Size = new Size(250, 40);
-            button1.TabIndex = 12;
-            button1.Text = "Turmas";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnTurmas.FlatAppearance.BorderSize = 0;
+            btnTurmas.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnTurmas.FlatStyle = FlatStyle.Flat;
+            btnTurmas.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnTurmas.ForeColor = Color.White;
+            btnTurmas.Image = Properties.Resources.student_card_icon_150965;
+            btnTurmas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTurmas.Location = new Point(3, 189);
+            btnTurmas.Name = "btnTurmas";
+            btnTurmas.Size = new Size(250, 40);
+            btnTurmas.TabIndex = 12;
+            btnTurmas.Text = "Turmas";
+            btnTurmas.UseVisualStyleBackColor = true;
+            btnTurmas.Click += btnTurmas_Click;
             // 
-            // button11
+            // btnCurso
             // 
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button11.ForeColor = Color.White;
-            button11.Image = Properties.Resources.courses;
-            button11.ImageAlign = ContentAlignment.MiddleLeft;
-            button11.Location = new Point(0, 153);
-            button11.Name = "button11";
-            button11.Size = new Size(250, 40);
-            button11.TabIndex = 11;
-            button11.Text = "Cursos";
-            button11.UseVisualStyleBackColor = true;
+            btnCurso.FlatAppearance.BorderSize = 0;
+            btnCurso.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnCurso.FlatStyle = FlatStyle.Flat;
+            btnCurso.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnCurso.ForeColor = Color.White;
+            btnCurso.Image = Properties.Resources.courses;
+            btnCurso.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCurso.Location = new Point(0, 153);
+            btnCurso.Name = "btnCurso";
+            btnCurso.Size = new Size(250, 40);
+            btnCurso.TabIndex = 11;
+            btnCurso.Text = "Cursos";
+            btnCurso.UseVisualStyleBackColor = true;
+            btnCurso.Click += btnCurso_Click;
             // 
-            // button6
+            // btnListUser
             // 
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(0, 419);
-            button6.Name = "button6";
-            button6.Size = new Size(250, 40);
-            button6.TabIndex = 6;
-            button6.Text = "Usuarios";
-            button6.UseVisualStyleBackColor = true;
+            btnListUser.FlatAppearance.BorderSize = 0;
+            btnListUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnListUser.FlatStyle = FlatStyle.Flat;
+            btnListUser.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnListUser.ForeColor = Color.White;
+            btnListUser.Image = (Image)resources.GetObject("btnListUser.Image");
+            btnListUser.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListUser.Location = new Point(0, 419);
+            btnListUser.Name = "btnListUser";
+            btnListUser.Size = new Size(250, 40);
+            btnListUser.TabIndex = 6;
+            btnListUser.Text = "Usuarios";
+            btnListUser.UseVisualStyleBackColor = true;
+            btnListUser.Click += btnListUser_Click;
             // 
-            // button5
+            // btnRelatorios
             // 
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(0, 373);
-            button5.Name = "button5";
-            button5.Size = new Size(247, 40);
-            button5.TabIndex = 5;
-            button5.Text = "Relatórios";
-            button5.UseVisualStyleBackColor = true;
+            btnRelatorios.FlatAppearance.BorderSize = 0;
+            btnRelatorios.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnRelatorios.FlatStyle = FlatStyle.Flat;
+            btnRelatorios.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnRelatorios.ForeColor = Color.White;
+            btnRelatorios.Image = (Image)resources.GetObject("btnRelatorios.Image");
+            btnRelatorios.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRelatorios.Location = new Point(0, 373);
+            btnRelatorios.Name = "btnRelatorios";
+            btnRelatorios.Size = new Size(247, 40);
+            btnRelatorios.TabIndex = 5;
+            btnRelatorios.Text = "Relatórios";
+            btnRelatorios.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -174,56 +176,58 @@
             button3.TabIndex = 3;
             button3.Text = "Terminar Sessão";
             button3.UseVisualStyleBackColor = true;
-            button3.Click += this.button3_Click;
+            button3.Click += button3_Click;
             // 
-            // button9
+            // btnDisciplina
             // 
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button9.ForeColor = Color.White;
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.ImageAlign = ContentAlignment.MiddleLeft;
-            button9.Location = new Point(0, 327);
-            button9.Name = "button9";
-            button9.Size = new Size(247, 40);
-            button9.TabIndex = 9;
-            button9.Text = "Avaliações";
-            button9.UseVisualStyleBackColor = true;
+            btnDisciplina.FlatAppearance.BorderSize = 0;
+            btnDisciplina.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnDisciplina.FlatStyle = FlatStyle.Flat;
+            btnDisciplina.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnDisciplina.ForeColor = Color.White;
+            btnDisciplina.Image = (Image)resources.GetObject("btnDisciplina.Image");
+            btnDisciplina.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDisciplina.Location = new Point(0, 327);
+            btnDisciplina.Name = "btnDisciplina";
+            btnDisciplina.Size = new Size(247, 40);
+            btnDisciplina.TabIndex = 9;
+            btnDisciplina.Text = "Disciplinas";
+            btnDisciplina.UseVisualStyleBackColor = true;
+            btnDisciplina.Click += btnDisciplina_Click;
             // 
-            // button8
+            // btnPropinas
             // 
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button8.ForeColor = Color.White;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(0, 281);
-            button8.Name = "button8";
-            button8.Size = new Size(250, 40);
-            button8.TabIndex = 8;
-            button8.Text = "Propinas";
-            button8.UseVisualStyleBackColor = true;
+            btnPropinas.FlatAppearance.BorderSize = 0;
+            btnPropinas.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnPropinas.FlatStyle = FlatStyle.Flat;
+            btnPropinas.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnPropinas.ForeColor = Color.White;
+            btnPropinas.Image = (Image)resources.GetObject("btnPropinas.Image");
+            btnPropinas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPropinas.Location = new Point(0, 281);
+            btnPropinas.Name = "btnPropinas";
+            btnPropinas.Size = new Size(250, 40);
+            btnPropinas.TabIndex = 8;
+            btnPropinas.Text = "Propinas";
+            btnPropinas.UseVisualStyleBackColor = true;
+            btnPropinas.Click += btnPropinas_Click;
             // 
-            // button2
+            // btnProfessores
             // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 235);
-            button2.Name = "button2";
-            button2.Size = new Size(250, 40);
-            button2.TabIndex = 2;
-            button2.Text = "Professores";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnProfessores.FlatAppearance.BorderSize = 0;
+            btnProfessores.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 38);
+            btnProfessores.FlatStyle = FlatStyle.Flat;
+            btnProfessores.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnProfessores.ForeColor = Color.White;
+            btnProfessores.Image = (Image)resources.GetObject("btnProfessores.Image");
+            btnProfessores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProfessores.Location = new Point(0, 235);
+            btnProfessores.Name = "btnProfessores";
+            btnProfessores.Size = new Size(250, 40);
+            btnProfessores.TabIndex = 2;
+            btnProfessores.Text = "Professores";
+            btnProfessores.UseVisualStyleBackColor = true;
+            btnProfessores.Click += btnProfessores_Click;
             // 
             // pictureBox2
             // 
@@ -351,14 +355,14 @@
         private PictureBox iconmaximizar;
         private PictureBox iconminimizar;
         private PictureBox iconrestaurar;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button6;
-        private Button button5;
+        private Button btnCurso;
+        private Button btnEstudantes;
+        private Button btnDisciplina;
+        private Button btnPropinas;
+        private Button btnListUser;
+        private Button btnRelatorios;
         private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnProfessores;
+        private Button btnTurmas;
     }
 }

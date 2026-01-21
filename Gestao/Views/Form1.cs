@@ -58,21 +58,58 @@ namespace Gestao
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void button3_Click(object sender, EventArgs e)
         {
             this.perfilUsuario = null;
             LoginFrm Login = new LoginFrm();
             Login.Show();
             this.Hide();
+        }
+        private void abrirFormInPanel(object Formhijo)
+        {
+            if (this.Conteudo.Controls.Count > 0)
+                this.Conteudo.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Conteudo.Controls.Add(fh);
+            fh.Show();
+        }
+        private void btnListUser_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new UsuariosFrm());
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new CursosFrm());
+        }
+
+        private void btnEstudantes_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new EstudantesFrm());
+        }
+
+        private void btnTurmas_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new TurmaFrm());
+        }
+
+        private void btnProfessores_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new ProfessoresFrm());
+        }
+
+        private void btnPropinas_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new PropinasFrm());
+        }
+
+        private void btnDisciplina_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new DisciplinaFrm());
         }
     }
 }

@@ -51,5 +51,38 @@ namespace Gestao.Repositories
 
             return null;
         }
+
+        public List<Usuario> ListarUsuarios()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+
+            using (var conn = DbConnection.GetConnection())
+            {
+                string sql = @"SELECT Id, Nome, Username, Perfil, Ativo
+                       FROM usuarios";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    conn.Open();
+
+                    using (MySqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            usuarios.Add(new Usuario
+                            {
+                                Id = Convert.ToInt32(dr["Id"]),
+                                Nome = dr["Nome"].ToString(),
+                                UserName = dr["Username"].ToString(),
+                                Perfil = dr["Perfil"].ToString(),
+                                Ativo = Convert.ToBoolean(dr["Ativo"])
+                            });
+                        }
+                    }
+                }
+            }
+
+            return usuarios;
+        }
     }
 }
