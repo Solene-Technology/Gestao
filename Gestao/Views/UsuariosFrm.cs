@@ -1,4 +1,5 @@
-﻿using Gestao.Repositories;
+﻿using Gestao.Models;
+using Gestao.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,7 +47,9 @@ namespace Gestao.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CreateUserFrm createUser = new CreateUserFrm();
+            createUser.Show();
+            //this.Hide();
         }
     }
 }

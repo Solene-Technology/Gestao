@@ -84,5 +84,33 @@ namespace Gestao.Repositories
 
             return usuarios;
         }
+        
+            // Método Create (Adicionar novo usuário)
+        public bool CriarUsuario(string nome, string username, string senha, string perfil)
+        {
+            using (var conn = DbConnection.GetConnection())
+            {
+                // Gerar hash da senha
+                string hash = HashService.GerarHash(senha);
+
+                string sql = @"INSERT INTO usuarios (Nome, Username, SenhaHash, Perfil, Ativo)
+                            VALUES (@nome, @username, @senha, @perfil, 1)"; // Ativo = 1 por padrão
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@senha", hash);
+                    cmd.Parameters.AddWithValue("@perfil", perfil);
+
+                    conn.Open();
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+
+                    return linhasAfetadas > 0; // Retorna true se inseriu
+                }
+            }
+        }
+        
     }
 }
+
